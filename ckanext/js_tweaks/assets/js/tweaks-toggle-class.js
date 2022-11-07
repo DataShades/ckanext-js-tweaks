@@ -34,6 +34,13 @@ ckan.module("tweaks-toggle-class", function ($, _) {
                     var _child_this = $(this);
                     _child_this.attr('tabindex', hasClass ? '0': '-1');
                 });
+                if (_this.attr("aria-expanded")) {
+                    if (_this.attr("aria-expanded") == "false") {
+                        _this.attr("aria-expanded", "true");
+                    } else {
+                        _this.attr("aria-expanded", "false");
+                    }
+                }
             });
         },
         _onAdd: function (e) {
