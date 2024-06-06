@@ -1,4 +1,4 @@
-{% macro accordion(id, is_expanded=false, title="Accordion title", custom_header=false) %}
+{% macro accordion(id, is_expanded=false, title="Accordion title", custom_header=false, expand_class="in") %}
     <div class="accordion" id="accordion-{{ id }}">
         <div class="card">
             <div class="card-header">
@@ -13,7 +13,7 @@
                 {% endif %}
             </div>
 
-            <div id="card-body-{{ id }}" class="card-body collapse {% if is_expanded %}in{% endif %}" aria-labelledby="heading-{{ id }}"
+            <div id="card-body-{{ id }}" class="card-body collapse {% if is_expanded %}{{ expand_class }}{% endif %}" aria-labelledby="heading-{{ id }}"
                 data-parent="#card-body-{{ id }}">
                 <div class="body-wrapper">
                     {{ caller(False) }}
