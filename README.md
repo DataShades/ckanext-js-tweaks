@@ -1,4 +1,4 @@
-[![Tests](https://github.com//ckanext-js-tweaks/workflows/Tests/badge.svg?branch=main)](https://github.com//ckanext-js-tweaks/actions)
+[![Tests](https://github.com/DataShades/ckanext-js-tweaks/workflows/Tests/badge.svg?branch=main)](https://github.com/DataShades/ckanext-js-tweaks/actions)
 
 # ckanext-js-tweaks
 
@@ -25,7 +25,7 @@ To install ckanext-js-tweaks:
 
 2. Clone the source and install it on the virtualenv
 
-    git clone https://github.com//ckanext-js-tweaks.git
+    git clone https://github.com/DataShades/ckanext-js-tweaks.git
     cd ckanext-js-tweaks
     pip install -e .
 	pip install -r requirements.txt
@@ -55,7 +55,7 @@ None at present
 To install ckanext-js-tweaks for development, activate your CKAN virtualenv and
 do:
 
-    git clone https://github.com//ckanext-js-tweaks.git
+    git clone https://github.com/DataShades/ckanext-js-tweaks.git
     cd ckanext-js-tweaks
     python setup.py develop
     pip install -r dev-requirements.txt
