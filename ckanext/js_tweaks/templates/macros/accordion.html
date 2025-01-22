@@ -7,14 +7,19 @@
                 {% else %}
                     <h2>{{ title }}</h2>
 
-                    <button class="btn btn-default btn-expand" id="heading-{{ id }}" data-toggle="collapse" data-target="#card-body-{{ id }}" aria-expanded="{{is_expanded}}" aria-controls="card-body-{{ id }}">
+                    <button class="btn btn-default btn-expand" id="heading-{{ id }}"
+                            data-toggle="collapse" data-target="#card-body-{{ id }}"
+                            data-bs-toggle="collapse" data-bs-target="#card-body-{{ id }}"
+                            aria-expanded="{{is_expanded}}" aria-controls="card-body-{{ id }}">
                         {% snippet 'snippets/svg/caret-down.svg' %}
                     </button>
                 {% endif %}
             </div>
 
             <div id="card-body-{{ id }}" class="card-body collapse {% if is_expanded %}{{ expand_class }}{% endif %}" aria-labelledby="heading-{{ id }}"
-                data-parent="#card-body-{{ id }}">
+                 data-parent="#card-body-{{ id }}"
+                 data-bs-parent="#card-body-{{ id }}"
+            >
                 <div class="body-wrapper">
                     {{ caller(False) }}
                 </div>
