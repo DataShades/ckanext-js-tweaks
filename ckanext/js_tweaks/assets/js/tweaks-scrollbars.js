@@ -10,7 +10,7 @@ ckan.module("tweaks-scrollbar", function ($, _) {
 
         },
         initialize: function () {
-            OverlayScrollbars($(this.el), {
+            OverlayScrollbarsGlobal.OverlayScrollbars(this.el[0], {
                 className: this.options.className,
                 normalizeRTL: this.options.normalizeRTL,
                 scrollbars: {

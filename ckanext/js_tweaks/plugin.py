@@ -1,18 +1,20 @@
-import ckan.plugins as plugins
-import ckan.plugins.toolkit as toolkit
+import ckan.plugins as p
+import ckan.plugins.toolkit as tk
+from ckan.common import CKANConfig
 
 from .helpers import get_helpers
 
-class JsTweaksPlugin(plugins.SingletonPlugin):
-    plugins.implements(plugins.IConfigurer)
-    plugins.implements(plugins.ITemplateHelpers)
+
+class JsTweaksPlugin(p.SingletonPlugin):
+    p.implements(p.IConfigurer)
+    p.implements(p.ITemplateHelpers)
 
     # IConfigurer
 
-    def update_config(self, config_):
-        toolkit.add_template_directory(config_, 'templates')
-        toolkit.add_public_directory(config_, 'public')
-        toolkit.add_resource('assets', 'js_tweaks')
+    def update_config(self, config_: CKANConfig) -> None:
+        tk.add_template_directory(config_, "templates")
+        tk.add_public_directory(config_, "public")
+        tk.add_resource("assets", "js_tweaks")
 
     # ITemplateHelpers
     def get_helpers(self):
