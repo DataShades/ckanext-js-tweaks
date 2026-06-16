@@ -1,6 +1,9 @@
+@use "variables" as v;
+@use "mixins" as m;
+
 .select-control {
-    @select-width       : 200px;
-    @select-width-mobile: 100%;
+    $select-width       : 200px;
+    $select-width-mobile: 100%;
 
     font-size: 16px;
     position : relative;
@@ -15,9 +18,9 @@
             font-size  : 12px;
             line-height: 16px;
             font-weight: 400;
-            color      : @tweaks-select-grey;
+            color      : v.$tweaks-select-grey;
 
-            background: @white;
+            background: v.$white;
             padding   : 0 6px;
             top       : -11px;
             left      : 11px;
@@ -30,17 +33,17 @@
 
 
     .select-button {
-        .with-collapse-arrow();
+        @include m.with-collapse-arrow();
         font-size    : 16px;
         font-weight  : 400;
         line-height  : 16px;
         padding      : 12px;
         border-radius: 8px;
-        background   : @white;
-        color        : @black;
-        border       : 1px solid @tweaks-select-border;
+        background   : v.$white;
+        color        : v.$black;
+        border       : 1px solid v.$tweaks-select-border;
 
-        min-width: @select-width;
+        min-width: $select-width;
         padding  : 11px 16px;
 
         box-shadow: none;
@@ -69,18 +72,18 @@
     }
 
     .select-options {
-        .raised();
-        color        : @black;
+        @include m.raised();
+        color        : v.$black;
         z-index      : 1;
         border-radius: 8px;
-        background   : @white;
+        background   : v.$white;
         font-size    : 14px;
         line-height  : 1.5em;
         position     : absolute;
         list-style   : none;
         padding      : 0;
-        width        : @select-width;
-        .zoom-visible(open);
+        width        : $select-width;
+        @include m.zoom-visible(open);
 
         max-height: 200px;
 
@@ -94,11 +97,11 @@
         }
     }
 
-    @media (max-width: @screen-xs-max) {
+    @media (max-width: v.$screen-xs-max) {
 
         .select-options,
         .select-button {
-            width: @select-width-mobile;
+            width: $select-width-mobile;
         }
     }
 }
@@ -109,7 +112,7 @@
         .control-label,
         .select-options,
         .select-button {
-            background-color: @tweaks-select-grey;
+            background-color: v.$tweaks-select-grey;
         }
 
         .select-button {
@@ -118,10 +121,10 @@
         }
 
         .select-options {
-            .raised(@color: @tweaks-select-grey);
+            @include m.raised($color: v.$tweaks-select-grey);
             max-height    : 145px;
             overflow-y    : scroll;
-            @media (min-width: @screen-xs-max) {
+            @media (min-width: v.$screen-xs-max) {
                 max-height    : 180px;
             }
         }

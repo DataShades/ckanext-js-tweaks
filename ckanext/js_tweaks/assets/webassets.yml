@@ -9,6 +9,8 @@ js_tweaks-js:
     - js/tweaks-scrollbars.js
     - js/tweaks-toogle-tooltip.js
     - js/tweaks-search-facet.js
+    - js/global-confirm.js
+    - js/global-toast.js
   extra:
     preload:
       - base/main

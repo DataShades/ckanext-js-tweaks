@@ -1,24 +1,24 @@
 {
     "name": "ckanext-js_tweaks",
     "scripts": {
-      "dev": "DEBUG=1 gulp watch",
-      "build": "gulp build"
+        "dev": "DEBUG=1 gulp watch",
+        "build": "gulp build"
     },
     "repository": {
-      "type": "git",
-      "url": "git+ssh://git@github.com:mutantsan/ckanext-js-tweaks.git"
+        "type": "git",
+        "url": "git+ssh://git@github.com:mutantsan/ckanext-js-tweaks.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {},
     "dependencies": {
-      "gulp": "^4.0.2",
-      "gulp-clean-css": "^4.3.0",
-      "gulp-if": "^3.0.0",
-      "gulp-less": "^5.0.0",
-      "gulp-sourcemaps": "^3.0.0",
-      "gulp-touch-fd": "^2.0.0"
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-if": "^3.0.0",
+        "gulp-sass": "^6.0.1",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-touch-fd": "^2.0.0",
+        "sass": "^1.99.0"
     }
-  }
-  
+}

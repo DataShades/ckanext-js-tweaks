@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 [data-tooltip] {
     position: relative;
     z-index : 110;
@@ -20,7 +22,7 @@
         min-width       : 50px;
         max-width       : 220px;
         padding         : 20px;
-        background-color: @tweaks-tooltip-bg;
+        background-color: v.$tweaks-tooltip-bg;
         border-radius   : 6px;
         box-shadow      : 0 0 24px rgba(0, 0, 0, 0.2);
         color           : #fff;
@@ -35,7 +37,7 @@
     &:after {
         border-width       : 5px 5px 0 5px;
         border-style       : solid;
-        border-color       : @tweaks-tooltip-bg transparent transparent transparent;
+        border-color       : v.$tweaks-tooltip-bg transparent transparent transparent;
         content            : "";
         transform          : translateX(-50%) scaleY(0);
         transform-origin   : top;
